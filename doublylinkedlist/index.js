@@ -95,4 +95,13 @@ class DoublyLinkedList {
             return current;
         }
     }
+
+    set(index, value) {
+        let foundNode = this.get(index);
+        if (foundNode !== null) {
+            foundNode.val = value;
+            return true;
+        }
+        return false;
+    }
 } 
