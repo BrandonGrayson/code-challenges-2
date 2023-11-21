@@ -90,4 +90,15 @@ class BinarySearchTree {
 
         return data;
     }
+    DFSPreOrder() {
+        let data = [];
+        function traverse(node) {
+            data.push(node.value)
+            if (node.left) data.push(node.left);
+            if (node.right) data.push(node.right);
+        }
+        traverse(this.root);
+
+        return data;
+    }
 }
